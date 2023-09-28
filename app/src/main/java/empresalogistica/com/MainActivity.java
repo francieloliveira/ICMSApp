@@ -11,7 +11,6 @@ import android.widget.AutoCompleteTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText mEditTextEstado;
     private EditText mEditTextValor;
     private TextView mTextViewPorcentagem;
     private TextView mTextViewTotal;
@@ -22,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        mEditTextEstado = findViewById(R.id.editTextEstado);
         autoCompleteTextView = findViewById(R.id.autocompleteTextView);
-        String[] items = {"RS", "SC", "PR"};
+        String[] items = {"RS", "SC", "PR", "AC", "MS", "RO", "AL", "AM", "AP", "BA",
+                "CE", "DF", "ES", "GO", "MA", "MT", "MG", "PA", "PB", "PE", "PI",
+                "RJ", "RN", "RR", "SP", "SE", "TO"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, items);
         autoCompleteTextView.setAdapter(adapter);
 
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View view) {
-//        float porcentagem = Float.parseFloat(mTextViewPorcentagem.getText().toString());
         float porcentagem = 0;
         String estado = autoCompleteTextView.getText().toString();
 
@@ -71,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 porcentagem = 0.18f;
                 break;
             default:
-                
                 break;
         }
 
