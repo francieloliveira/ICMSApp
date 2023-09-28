@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         mTextViewPorcentagem.setText(String.format("%.2f%%", porcentagem));
 
         float valor = Float.parseFloat(mEditTextValor.getText().toString());
-
         float total = valor * porcentagem;
-        mTextViewTotal.setText(String.format("Total:%s", total));
+
+        mTextViewTotal.setText(String.format("Total: %s", total));
     }
 
 
