@@ -2,6 +2,7 @@ package empresalogistica.com;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mTextViewTotal = findViewById(R.id.textViewTotal);
     }
 
+    @SuppressLint("DefaultLocale")
     public void calcular(View view) {
         float porcentagem = 0;
         String estado = autoCompleteTextView.getText().toString();
@@ -73,12 +75,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        mTextViewPorcentagem.setText(String.format("%.2f%%", porcentagem));
+        mTextViewPorcentagem.setText(String.format("%.1f%%", porcentagem * 100));
 
         float valor = Float.parseFloat(mEditTextValor.getText().toString());
         float total = valor * porcentagem;
 
-        mTextViewTotal.setText(String.format("Total: %s", total));
+        mTextViewTotal.setText(String.format("Total de ICMS pago: %s", total));
     }
 
 
