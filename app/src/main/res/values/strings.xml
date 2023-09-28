@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ICMSApp</string>
+    <string name="valor_do_produto">Valor do Produto</string>
+    <string name="estado">Estado</string>
+    <string name="calcular">Calcular</string>
+    <string name="porcentagem">Porcentagem</string>
+    <string name="valor_icms">Valor ICMS</string>
 </resources>

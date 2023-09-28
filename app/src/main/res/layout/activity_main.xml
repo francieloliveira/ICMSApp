@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Porcentagem"
+            android:hint="@string/porcentagem"
             tools:layout_editor_absoluteY="100dp" />
 
         <TextView
@@ -25,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Valor do ICMS"
+            android:hint="@string/valor_icms"
             tools:layout_editor_absoluteY="100dp" />
 
         <EditText
@@ -34,19 +33,19 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:inputType="text"
-            android:text="Valor do Produto"
-            tools:layout_editor_absoluteY="314dp" />
+            android:hint="@string/valor_do_produto"
+            tools:layout_editor_absoluteY="314dp"
+            android:autofillHints="30" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="141dp"
             android:orientation="vertical">
 
-            <AutoCompleteTextView
-                android:id="@+id/autocompleteTextView"
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Type here" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="calcular"
-                android:text="Calcular"
+                android:hint="@string/calcular"
                 tools:layout_editor_absoluteY="568dp" />
         </LinearLayout>
     </LinearLayout>
