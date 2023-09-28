@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        mTextViewPorcentagem.setText(String.format("%.1f%%", porcentagem * 100));
+        mTextViewPorcentagem.setText(String.format("%.0f%%", porcentagem * 100));
 
         float valor = Float.parseFloat(mEditTextValor.getText().toString());
-        float total = valor * porcentagem;
+        float total = valor + (valor * porcentagem);
 
-        mTextViewTotal.setText(String.format("Total de ICMS pago: %s", total));
+        mTextViewTotal.setText(String.format("Total com ICMS: R$ %.2f", total));
     }
 
 
