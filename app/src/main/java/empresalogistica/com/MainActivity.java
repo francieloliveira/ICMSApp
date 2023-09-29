@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mTextViewTotal = findViewById(R.id.textViewTotal);
     }
 
-    public void calcular(View view) {
+    public void calcularICMS(View view) {
 
         float porcentagem = 0;
 

@@ -5,4 +5,5 @@
     <string name="lbl_calcular">Calcular</string>
     <string name="lbl_porcentagem">Porcentagem: </string>
     <string name="lbl_valor_icms">Valor ICMS: </string>
+    <string name="logo_image">Logo image</string>
 </resources>
