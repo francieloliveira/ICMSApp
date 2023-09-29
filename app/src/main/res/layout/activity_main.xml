@@ -22,24 +22,30 @@
                 android:id="@+id/textViewPorcentagem"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/porcentagem"
-                android:textAlignment="center" />
+                android:hint="@string/lbl_porcentagem"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
 
             <TextView
                 android:id="@+id/textViewTotal"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/valor_icms"
-                android:textAlignment="center" />
+                android:hint="@string/lbl_valor_icms"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
 
             <EditText
                 android:id="@+id/editTextValor"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:autofillHints="30"
-                android:hint="@string/valor_do_produto"
+                android:hint="@string/hint_valor_do_produto"
                 android:inputType="text"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
 
         </LinearLayout>
 
@@ -52,7 +58,9 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/estado" />
+                android:hint="@string/hint_estado"
+                android:textSize="20sp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -64,7 +72,7 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/calcular"
+                android:hint="@string/lbl_calcular"
                 android:onClick="calcular" />
         </LinearLayout>
     </LinearLayout>
