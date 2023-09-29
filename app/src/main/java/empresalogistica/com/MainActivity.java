@@ -1,7 +1,6 @@
 package empresalogistica.com;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDialog;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +10,15 @@ import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     private EditText mEditTextValor;
     private TextView mTextViewPorcentagem;
     private TextView mTextViewTotal;
     private Spinner mSpinner;
+    final Locale locale = new Locale("pt", "BR");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,25 +39,40 @@ public class MainActivity extends AppCompatActivity {
 
         String estado = mSpinner.getItemAtPosition(mSpinner.getSelectedItemPosition()).toString();
         switch (estado) {
-            case "Selecione o Estado:":
-                Toast errorToast = Toast.makeText(this, "Erro! Selecione um Estado!", Toast.LENGTH_SHORT);
+            case "Selecione um Estado:":
+                Toast errorToast = Toast.makeText(this, "Você precisa selecionar um Estado!", Toast.LENGTH_SHORT);
                 errorToast.show();
                 break;
-            case "AC":
-            case "MS":
-            case "RO":
+            case "Acre":
+            case "Alagoas":
+            case "Espírito Santo":
+            case "Goiás":
+            case "Mato Grosso":
+            case "Mato Grosso do Sul":
+            case "Pará":
+            case "Piauí":
+            case "Rio Grande do Sul":
+            case "Roraima":
+            case "Santa Catarina":
                 porcentagem = 0.17f;
+                break;
+            case "Rondônia":
+                porcentagem = 0.175f;
                 break;
             default:
                 porcentagem = 0.18f;
                 break;
         }
-        if(porcentagem != 0) {
-            mTextViewPorcentagem.setText(String.format("Porcentagem: %.0f%%", porcentagem * 100));
 
+        try {
             float valor = Float.parseFloat(mEditTextValor.getText().toString());
+            mTextViewPorcentagem.setText(String.format(locale, "Porcentagem: %.0f%%", porcentagem * 100));
             float total = valor + (valor * porcentagem);
-            mTextViewTotal.setText(String.format("Total com ICMS: R$ %.2f", total));
+            mTextViewTotal.setText(String.format(locale, "Total com ICMS: R$ %.2f", total));
+        } catch (NumberFormatException e) {
+            Toast errorToast = Toast.makeText(this, "Por favor, insira um valor do produto!", Toast.LENGTH_SHORT);
+            errorToast.show();
         }
+
     }
 }
