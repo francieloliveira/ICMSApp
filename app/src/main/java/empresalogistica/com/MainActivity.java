@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View view) {
+
         float porcentagem;
+
         String estado = mSpinner.getItemAtPosition(mSpinner.getSelectedItemPosition()).toString();
         switch (estado) {
             case "AC":
