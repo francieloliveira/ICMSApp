@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="8dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -21,7 +19,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="110dp"
                 android:contentDescription="@string/logo_image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/icmslogo"
@@ -32,42 +30,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="?attr/popupMenuBackground"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp">
 
             <TextView
-                android:theme="@style/texto_padrao"
-                android:paddingTop="5dp"
                 android:id="@+id/textViewPorcentagem"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/lbl_porcentagem"
+                android:paddingTop="5dp"
                 android:textAlignment="gravity"
-                />
+                android:theme="@style/texto_padrao" />
 
             <TextView
-                android:theme="@style/texto_padrao"
-                android:paddingTop="5dp"
                 android:id="@+id/textViewTotal"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/lbl_valor_icms"
+                android:paddingTop="5dp"
                 android:textAlignment="gravity"
-                />
+                android:theme="@style/texto_padrao" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
-                    android:theme="@style/texto_padrao"
                     android:id="@+id/editTextValorSifrao"
                     android:layout_width="31dp"
                     android:layout_height="48dp"
                     android:autofillHints="30"
-                    android:textAlignment="textEnd"
                     android:text="@string/RS"
-                    />
+                    android:textAlignment="textEnd"
+                    android:theme="@style/texto_padrao" />
+
                 <EditText
-                    android:theme="@style/texto_padrao"
                     android:id="@+id/editTextValor"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -75,9 +74,8 @@
                     android:hint="@string/hint_valor_do_produto"
                     android:inputType="text"
                     android:textAlignment="textStart"
-                    />
+                    android:theme="@style/texto_padrao" />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
