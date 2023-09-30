@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
             float valor = Float.parseFloat(mEditTextValor.getText().toString());
             mTextViewPorcentagem.setText(String.format(locale, "Porcentagem: %.0f%%", porcentagem * 100));
             float total = valor + (valor * porcentagem);
-            mTextViewTotal.setText(String.format(locale, "Total com ICMS: R$ %.2f", total));
+            mTextViewTotal.setText(String.format(locale, "Valor com ICMS: R$ %.2f", total));
         } catch (NumberFormatException e) {
-            Toast errorToast = Toast.makeText(this, "Por favor, insira um valor do produto!", Toast.LENGTH_SHORT);
+            Toast errorToast = Toast.makeText(this, "Por favor, insira o valor do produto!", Toast.LENGTH_SHORT);
             errorToast.show();
         }
 

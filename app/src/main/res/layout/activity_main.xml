@@ -16,7 +16,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -34,30 +35,49 @@
             android:orientation="vertical">
 
             <TextView
+                android:theme="@style/texto_padrao"
+                android:paddingTop="5dp"
                 android:id="@+id/textViewPorcentagem"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/lbl_porcentagem"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textAlignment="gravity"
+                />
 
             <TextView
+                android:theme="@style/texto_padrao"
+                android:paddingTop="5dp"
                 android:id="@+id/textViewTotal"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/lbl_valor_icms"
-                android:textAlignment="center"
-                android:textSize="20sp"/>
+                android:textAlignment="gravity"
+                />
 
-            <EditText
-                android:id="@+id/editTextValor"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:autofillHints="30"
-                android:hint="@string/hint_valor_do_produto"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:textSize="20sp"/>
+                android:layout_height="wrap_content">
+                <TextView
+                    android:theme="@style/texto_padrao"
+                    android:id="@+id/editTextValorSifrao"
+                    android:layout_width="31dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="30"
+                    android:textAlignment="textEnd"
+                    android:text="@string/RS"
+                    />
+                <EditText
+                    android:theme="@style/texto_padrao"
+                    android:id="@+id/editTextValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:autofillHints="30"
+                    android:hint="@string/hint_valor_do_produto"
+                    android:inputType="text"
+                    android:textAlignment="textStart"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -65,11 +85,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Spinner
+                android:theme="@style/texto_padrao"
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:textSize="20sp"
                 android:hint="@string/hint_estado"
-                android:textSize="20sp" />
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -77,13 +99,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
+                android:theme="@style/texto_padrao"
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_calcular"
                 android:textColor="@color/white"
                 android:onClick="calcularICMS"
-                android:textSize="20sp" />
+                />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
